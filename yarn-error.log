@@ -1,0 +1,51 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Luka\.yarn\releases\yarn-1.22.19.cjs add bootstrap react-bootstrap
+
+PATH: 
+  C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\nodejs\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Luka\.cargo\bin;C:\Users\Luka\AppData\Local\Programs\Eclipse Adoptium\jdk-17.0.5.8-hotspot\bin;C:\Users\Luka\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\Luka\AppData\Local\Programs\Python\Python311\;C:\Users\Luka\AppData\Local\Microsoft\WindowsApps;C:\Users\Luka\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Luka\AppData\Local\GitHubDesktop\bin;C:\Users\Luka\.dotnet\tools;C:\Users\Luka\AppData\Local\Programs\oh-my-posh\bin;C:\Program Files\heroku\bin;C:\Users\Luka\AppData\Roaming\npm;C:\Program Files\mingw64\bin;C:\Users\Luka\AppData\Local\JetBrains\Toolbox\scripts;C:\Users\Luka\AppData\Local\JetBrains\IntelliJ IDEA 2023.1\bin;C:\Users\Luka\.dotnet\tools;C:\Program Files\Tesseract-OCR
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.14.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'C:\Users\Luka\Desktop\Kiu-MyAuto\node_modules\esbuild-windows-64\esbuild.exe'
+
+npm manifest: 
+  {
+    "name": "react-typescript",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "React TypeScript on Replit, using Vite bundler",
+    "scripts": {
+      "dev": "vite",
+      "build": "tsc && vite build",
+      "preview": "vite preview"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "@types/react": "^18.0.15",
+      "@types/react-dom": "^18.0.6",
+      "@vitejs/plugin-react": "^2.0.0",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "typescript": "^4.7.4",
+      "vite": "^3.0.4"
+    },
+    "dependencies": {
+      "sass": "^1.62.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

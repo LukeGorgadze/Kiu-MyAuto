@@ -1,0 +1,1326 @@
+main {
+  text-align: center;
+  vertical-align: center;
+  line-height: 100vh
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@200;400;600&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+$background: #f2f3f6;
+$orange: #FD4100;
+$grayBorder: #E2E5EB;
+$niceGray: #6F7383;
+
+* {
+  font-family: 'Noto Sans Georgian', sans-serif;
+}
+
+.APP {
+  height: auto;
+}
+
+body {
+  background-color: $background;
+  margin: 0;
+  padding: 0;
+  // font-family: 'Raleway', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+
+
+}
+
+.Navbar {
+  background-color: white;
+  height: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  .content {
+    width: 1100px;
+    margin: auto;
+
+    .MyAutoLogo {
+      width: 140px;
+      cursor: pointer;
+    }
+  }
+}
+
+.NavLiner {
+  height: 80px;
+  width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  box-sizing: border-box;
+
+  .Arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+  }
+
+  // .NavSearch{
+  //   color: $orange;
+  // }
+  .Buy {
+    color: $orange;
+  }
+}
+
+.PageContent {
+  width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.LeftPanel {
+  width: 250px;
+  height: 500px;
+  top: 10px;
+  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
+  background: transparent;
+  border-radius: 10px;
+  position: sticky;
+}
+
+.LeftPanelDis {
+  width: 250px;
+  height: 500px;
+  top: 10px;
+  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
+  background: transparent;
+  border-radius: 10px;
+  position: sticky;
+}
+
+.Filter {
+  &-1 {
+    padding-top: 10px;
+  }
+}
+
+.MainPanel {
+  width: 75%;
+
+  &-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+
+    &-buttons {
+      display: flex;
+      gap: 20px;
+    }
+  }
+
+  &-filter {
+
+    background-color: transparent;
+    border: 1px solid $grayBorder;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    color: $niceGray;
+
+    &-t {
+      color: rgb(46, 46, 46);
+    }
+  }
+
+  &-Content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+    // height: auto;
+
+    &-Loader {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      margin-top: 250px;
+    }
+  }
+}
+
+
+.VehicleSelector {
+  display: flex;
+  width: 250;
+
+  @mixin duration($time) {
+    transition-duration: $time;
+  }
+
+  &-1 {
+    // include duration mixin
+    @include duration(0.2s);
+    border: 1px solid $grayBorder;
+    border-radius: 10px 0 0 0;
+    font-size: 30px;
+  }
+
+  &-2 {
+    @include duration(0.2s);
+    border: 1px solid $grayBorder;
+    border-left: 0;
+    border-right: 0;
+    font-size: 30px;
+  }
+
+  &-3 {
+    @include duration(0.2s);
+    border: 1px solid $grayBorder;
+    border-radius: 0 10px 0 0;
+    font-size: 30px;
+  }
+
+  button {
+    width: 166px;
+    height: 48px;
+    left: 518px;
+    top: 149px;
+    background-color: $background;
+    cursor: pointer;
+
+    &:hover {
+      background-color: white;
+    }
+  }
+
+  .active {
+    color: $orange;
+    border-bottom: 1px solid $orange;
+  }
+}
+
+.Filter {
+  background-color: white;
+  // height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $grayBorder;
+  border-top: 0;
+
+  .Garigeba {
+    width: 202px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid $grayBorder;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    &-t {
+      color: #6F7383;
+      text-overflow: hidden;
+      margin-left: 10px;
+      white-space: nowrap;
+      width: 100px;
+    }
+
+
+
+    &-options {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+      background-color: white;
+      width: 202px;
+      margin-top: 10px;
+      border: 1px solid $grayBorder;
+      border-radius: 10px 10px 0 0;
+      border-bottom: none;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      box-sizing: border-box;
+      padding: 20px;
+      padding-bottom: 0;
+    }
+
+    &-DropDown {
+      position: absolute;
+      width: 202px;
+
+      cursor: pointer;
+
+      .emptyFilter {
+        box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.1);
+        background-color: white;
+        display: flex;
+        align-items: center;
+        border: 1px solid $grayBorder;
+        padding: 10px;
+        border-radius: 0 0 10px 10px;
+        gap: 5px;
+
+        &-txt {
+          color: $niceGray;
+          cursor: pointer;
+
+          &:hover {
+            color: black;
+          }
+        }
+      }
+
+      .searchBtn {
+        width: 60px;
+        background-color: $orange;
+        height: 20px;
+        border-radius: 5px;
+        color: white;
+        padding: 5px;
+        cursor: pointer;
+
+      }
+    }
+  }
+
+  &-1 {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    p {
+      font-size: 15px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &-2 {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    p {
+      font-size: 15px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &-3 {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    p {
+      font-size: 15px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &-4 {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    p {
+      font-size: 15px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &-select {
+    width: 202px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid $grayBorder;
+    border-radius: 8px;
+
+    option {
+      width: 402px;
+      height: 200px;
+    }
+  }
+}
+
+.Price {
+  background-color: white;
+  border: 1px solid $grayBorder;
+  border-top: 0;
+  border-bottom: 0;
+  margin: 0;
+  // background: linear-gradient(to bottom, white, rgb(250, 250, 250));
+
+  .prText {
+    font-weight: 600;
+  }
+}
+
+.priceValute {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: auto;
+  width: 80%;
+  padding-top: 20px;
+
+  p {
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.valute {
+  display: flex;
+  width: 50px;
+  // border: 1px solid $grayBorder;
+  border-radius: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .currency {
+    background-color: transparent;
+    font-weight: 600;
+    color: $niceGray;
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+    border-radius: 50%;
+    /* Updated property */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .currCurrency {
+    background-color: #272A37;
+    color: white;
+  }
+}
+
+.priceInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  height: 70px;
+
+  &-1 {
+    width: 70px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid $grayBorder;
+    width: 89px;
+    height: 40px;
+    box-sizing: border-box;
+  }
+
+  &-2 {
+    width: 70px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid $grayBorder;
+    width: 89px;
+    height: 40px;
+    box-sizing: border-box;
+  }
+}
+
+.Search {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0;
+  border: 1px solid $grayBorder;
+
+  &-btn {
+    width: 70%;
+    padding: 8px 20px;
+    border: none;
+    background-color: $orange;
+    color: white;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition-duration: 0.5s;
+
+    &:hover {
+      background-color: $grayBorder;
+      color: black;
+    }
+  }
+
+  &-clear {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid $grayBorder;
+    cursor: pointer;
+  }
+}
+
+.carImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carImage {
+  width: 200px;
+  height: 144px;
+  border-radius: 8px;
+  margin: auto;
+}
+
+.Vehicle {
+  width: 780px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 10px;
+  justify-content: start;
+  padding: 15px 15px;
+
+  .year {
+    font-weight: 600;
+    color: $niceGray;
+  }
+
+  &-name {
+    font-weight: 600;
+  }
+}
+
+.carInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10px;
+
+  .view-time {
+    display: flex;
+    gap: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    align-items: center;
+    font-weight: 300;
+    margin-left: 20px;
+  }
+
+  .viewCount {
+    color: rgb(124, 124, 124);
+    font-weight: 400;
+  }
+
+  .dot {
+    color: rgb(124, 124, 124);
+    font-weight: 400;
+  }
+
+  .orderDate {
+    color: rgb(124, 124, 124);
+    font-weight: 400;
+  }
+
+  &-middleSection {
+    display: flex;
+    justify-content: space-between;
+
+    .carPrice {
+      width: 120px;
+      gap: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      font-size: 20px;
+    }
+  }
+
+  &-lowerSection {
+    display: flex;
+    justify-content: space-between;
+
+    &-btns {
+      display: flex;
+      gap: 15px;
+    }
+  }
+}
+
+.carHeader {
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.cartitle {
+  display: flex;
+  margin-left: 20px;
+  gap: 10px;
+}
+
+.carParameters {
+  display: flex;
+  margin-left: 20px;
+  gap: 120px;
+
+  &-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: rgb(56, 56, 56);
+  }
+
+  &-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: rgb(56, 56, 56);
+  }
+
+  &-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.params {
+  display: flex;
+  gap: 10px;
+
+  &-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.view-time {
+  display: flex;
+  gap: 5px;
+
+  .dot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+.checker {
+  // padding: 5px;
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  border: 1px solid rgb(126, 126, 126);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+}
+
+.checkered {
+  background-color: $orange;
+}
+
+.checkboxCover {
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.checkboxesInside {
+  border-left: 1px solid rgb(126, 126, 126);
+  margin-left: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
+
+.checkbox {
+  color: rgb(126, 126, 126);
+
+}
+
+.DropDown {
+  // similar to garigeba
+  width: 202px;
+  height: 40px;
+  background: #FFFFFF;
+  border: 1px solid $grayBorder;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+
+  &-title {
+    margin-left: 10px;
+    color: $niceGray;
+  }
+
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+  margin-right: 5px;
+}
+
+.arrow.rotate {
+  transform: rotate(180deg);
+}
+
+.DropSection {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  position: absolute;
+  z-index: 2;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid $grayBorder;
+  width: 202px;
+  box-sizing: border-box;
+  background-color: white;
+  cursor: pointer;
+
+
+  &-Header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    &-Man {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+  }
+
+  &-hsm {
+    width: 160px;
+
+  }
+
+  &-h {
+    font-weight: 600;
+    font-size: 15px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    color: $niceGray;
+
+    &::after {
+      content: "";
+      width: 100%;
+      margin: auto;
+      margin-left: 10px;
+      display: block;
+      border-top: 1px solid black;
+      /* or any other border style you prefer */
+    }
+
+  }
+
+  &-b {
+    border: 1px solid $grayBorder;
+    width: 60px;
+    height: 1px;
+    background-color: $grayBorder;
+  }
+
+  &-Options {
+    height: 300px;
+    overflow-y: scroll;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      border-radius: 5px;
+      ;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: black;
+      border-radius: 5px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: black;
+    }
+
+  }
+
+  &-Option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &-t {
+      color: $niceGray;
+
+      &:hover {
+        color: black;
+
+      }
+    }
+  }
+}
+
+.emptyFilter {
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.1);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border: 1px solid $grayBorder;
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+  gap: 5px;
+
+  &-txt {
+    color: $niceGray;
+    cursor: pointer;
+
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+.customsPassed {
+  color: #26B753;
+  font-size: 12px;
+}
+
+.customsNotPassed {
+  color: #FD4100;
+  font-size: 12px;
+}
+
+.searchBtn {
+  width: 60px;
+  background-color: $orange;
+  height: 20px;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+
+}
+
+.FilterOption {
+  width: auto;
+  padding: 8px;
+  margin-left: 10px;
+  color: $niceGray;
+  box-sizing: border-box;
+
+  &:hover {
+    color: black;
+  }
+}
+
+.DropSectionFilter {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  position: absolute;
+  z-index: 2;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid $grayBorder;
+  width: 180px;
+  box-sizing: border-box;
+  background-color: white;
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.Time {
+  padding: 20px 0;
+  background-color: white;
+  width: 100%;
+  margin: auto;
+  border: 1px solid $grayBorder;
+  border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+  box-sizing: border-box;
+
+  &-Year {
+
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    ;
+  }
+
+  &-title {
+    font-weight: 600;
+  }
+
+  &-Content {
+    width: 202px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: auto;
+  }
+}
+
+.YearDropDown {
+  &-Cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    /* Added position: relative; */
+
+    .year {
+      cursor: pointer;
+    }
+  }
+
+  background-color: white;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: 1px solid $grayBorder;
+  width: 89px;
+  height: 40px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 13px;
+  cursor: pointer;
+
+  &-options {
+    margin-top: 20px;
+    position: absolute;
+    /* Added position: absolute; */
+    top: 100%;
+    /* Adjusted positioning */
+    left: 0;
+    /* Adjusted positioning */
+    background-color: white;
+    width: 89px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid $grayBorder;
+    height: 300px;
+    overflow-y: scroll;
+    gap: 5px;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      border-radius: 5px;
+      ;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: black;
+      border-radius: 5px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: black;
+    }
+  }
+
+}
+
+.Pager {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  /* Adjust the width as per your requirement */
+
+}
+
+.pager-button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.pagination {
+  display: inline-flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination li {
+  cursor: pointer;
+  padding: 5px 10px;
+  margin: 0 5px;
+  color: #333;
+  border-radius: 3px;
+}
+
+.pagination li.active {
+  color: $orange
+}
+
+.PagerContainer {
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.Queries {
+  display: flex;
+  width: 98%;
+  gap: 10px;
+  flex-wrap: wrap;
+  background-color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.Query {
+  background-color: $grayBorder;
+  padding: 5px;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.Query-Remove {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  /* CSS rules for screens with a width lower than 500px */
+  /* Place your styles here */
+
+  .Navbar {
+    margin: auto;
+
+    .MyAutoLogo {
+      width: 100px;
+      margin-left: 20px;
+    }
+  }
+
+  // .NavLiner {
+  //   margin-left: 20px;
+  // }
+
+  .LeftPanel {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition-duration: 1.3s ease-in-out;
+  }
+
+  .LeftPanelDis {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: -1200px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .Filter {
+    height: 60%
+  }
+
+  .Search {
+    height: 18%;
+  }
+
+  .PageContent {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .MainPanel {
+    width: 100%;
+
+    &-filter {
+      padding: 8px 2px;
+      font-size: 12px;
+    }
+
+    &-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10px;
+
+      &-buttons {
+        display: flex;
+        gap: 20px;
+      }
+    }
+  }
+
+  .filterToggle {
+
+    background-color: transparent;
+    border: 1px solid $grayBorder;
+    padding: 8px 2px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    color: $niceGray;
+    font-size: 12px;
+    color: black;
+  }
+
+  .Vehicle {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    justify-content: start;
+    padding: 15px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    .year {
+      font-weight: 600;
+      color: $niceGray;
+    }
+
+    &-name {
+      font-weight: 600;
+    }
+  }
+
+  .DropSectionFilter {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 2;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid $grayBorder;
+    width: 120px;
+    box-sizing: border-box;
+    background-color: white;
+    cursor: pointer;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+
+  .carImageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carImage {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    margin: auto;
+    object-fit: cover;
+  }
+
+  .carParameters {
+    display: flex;
+    gap: 20px;
+    margin-left: 0;
+
+    &-1 {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      color: rgb(56, 56, 56);
+    }
+
+    &-2 {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      color: rgb(56, 56, 56);
+    }
+
+    &-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .PagerContainer {
+    width: 300px;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 5px;
+
+    margin-top: 10px;
+  }
+
+  .Pager {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    /* Adjust the width as per your requirement */
+
+  }
+
+  .pager-button {
+    padding: 2px 5px;
+    margin: 0 5px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+
+  .pagination {
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .pagination li {
+    cursor: pointer;
+    padding: 2px 5px;
+    margin: 0 5px;
+    color: #333;
+    border-radius: 3px;
+  }
+
+  .pagination li.active {
+    color: $orange
+  }
+
+  .totalPosts {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .VehicleSelector {
+    width: 100%;
+
+    button {
+      width: 33.33%;
+      height: 48px;
+      left: 518px;
+      top: 149px;
+      background-color: $background;
+      cursor: pointer;
+    }
+  }
+
+  .LeftPanelBTN {
+    background-color: white;
+    display: flex;
+    font-size: 50px;
+    justify-content: center;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .carInfo-middleSection {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 20px;
+
+  }
+}
